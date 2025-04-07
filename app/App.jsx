@@ -6,7 +6,7 @@ import Chef from './pages/chef';
 function App() {
   return (
     <>
-      <Chef />
+      <FormSection />
     </>
   )
 }

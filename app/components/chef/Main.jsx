@@ -13,15 +13,13 @@ export default function ChefMain(){
      * handle the data from the form
      */
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function handleSubmit(formData) {
         const newIngredient = formData.get("ingredient")
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
     return(
         <main className="flex flex-col pb-5">
-            <form onSubmit={handleSubmit} className="add-ingredient-form flex gap-3">
+            <form action={handleSubmit} className="add-ingredient-form flex gap-3">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
